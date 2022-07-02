@@ -16,16 +16,39 @@ a {
 
 .title {
     font-family: 'Merriweather-Black';
-    font-size: 2.5rem;
+    font-size: clamp(1.2rem, 7vw, 2.5rem);
 }
 
 .subtitle {
     font-family: 'Rubik-Medium';
     color: rgba($text_white, $alpha: 0.5);
+    font-size: clamp(0.9rem, 4vw, 1.2rem);
 }
 
 .container {
     max-width: 1300px;
     margin-inline: auto;
     padding-inline: 50px;
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding-inline: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .title {
+        line-height: 200%;
+    }
+}
+
+@media (max-height: 796px) {
+    .title {
+        font-size: clamp(1.2rem, 7vh, 2.5rem);
+    }
+    
+    .subtitle {
+        font-size: clamp(0.9rem, 4vh, 1.2rem);
+    }
 }
