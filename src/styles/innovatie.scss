@@ -1,0 +1,26 @@
+@import 'variables';
+
+.innovatie {
+    background-color: $dark__green;
+
+    .title {
+        color: $text_white;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: row;
+        gap: 100px;
+        width: 100%;
+        color: #BDC1C2;
+    }
+}
+
+@media (max-width: 796px) {
+    .innovatie {
+        &__text {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+}

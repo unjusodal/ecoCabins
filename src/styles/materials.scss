@@ -1,0 +1,17 @@
+@import 'variables';
+
+.materials {
+    background-color: #FFF;
+
+    .title {
+        color: $dark__green;
+    }
+
+    .text {
+        max-width: 550px;
+    }
+
+    .button {
+        margin-top: 15px;
+    }
+}
