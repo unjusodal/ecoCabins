@@ -11,3 +11,25 @@ burger.addEventListener('click', () => {
         menu.classList.remove('nav__menu--active')
     })
 })
+
+//slider
+new Swiper('.swiper', {
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+    },
+
+    breakpoints: {
+        0: {
+            slidesPerView: 1
+        },
+
+        658: {
+            slidesPerView: 2
+        },
+
+        992: {
+            slidesPerView: 1
+        }
+    }
+})

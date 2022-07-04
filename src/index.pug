@@ -4,7 +4,8 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet", href="styles.css")
+        link(rel="stylesheet", href="https://unpkg.com/swiper@8/swiper-bundle.min.css")
+        link(rel="stylesheet", href="styles.min.css")
         title EcoCabins
     body
         .background-img
@@ -48,7 +49,17 @@ html(lang="en")
                         specifieke materiaalgebruik. De voordelen van bouwen met hout zijn legio: hout 
                         is licht, flexibel, isoleert goed en bouwt snel en efficiënt.
                     button.button Lees meer
-                .materials__slider
+                .materials__slider.swiper
+                    .swiper-wrapper
+                        .swiper-slide
+                            img(src="assets/images/slider-imgs/wood-furniture.jpg", alt="Furniture")
+                        .swiper-slide
+                            img(src="assets/images/slider-imgs/materials.jpg", alt="Materials")
+                        .swiper-slide
+                            img(src="assets/images/slider-imgs/inside.jpg", alt="Inside a house")
+                        .swiper-slide
+                            img(src="assets/images/slider-imgs/wood-elements.jpg", alt="Furniture")
+                    .swiper-pagination
         section.innovatie
             .container
                 h1.title Innovatie
@@ -98,4 +109,5 @@ html(lang="en")
                         a(href="#") Cookies
                     h5.subtext 
                         a(href="#") Privacybeleid
-        script(src="index.min.js") 
+        script(src='https://unpkg.com/swiper@8/swiper-bundle.min.js')
+        script(type='module', src="index.min.js") 

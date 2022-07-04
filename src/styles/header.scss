@@ -162,7 +162,7 @@
 
     @include socialAdaptive;
 
-    * {
+    .background-img {
         overflow-x: hidden;
     }
 
@@ -226,5 +226,30 @@
 
     .social {
         bottom: 10px;
+    }
+}
+
+@media (orientation: portrait) and (max-height: 796px) {
+    .header {
+        &__content {
+            .title {
+                font-size: clamp(0.8rem, 7vw, 2.5rem);
+            }
+            
+            .subtitle {
+                font-size: clamp(0.5rem, 4vw, 1.2rem);
+            }
+        }
+    }
+}
+
+@media (orientation: portrait) and (max-height: 530px) {
+    .header {
+        &__content {
+            .title, .subtitle {
+                font-size: 1.1rem;
+                line-height: 25px;
+            }
+        }
     }
 }
