@@ -14,10 +14,6 @@ function styles() {
     return src('src/styles/*.scss')
 
     .pipe(sass())
-    .pipe(autoprefixer({
-        overrideBrowserslist: ['last 10 version'],
-        grid: true
-    }))
     .pipe(cssmin())
     .pipe(concat('styles.min.css'))
     .pipe(dest('dist'))
@@ -27,9 +23,7 @@ function styles() {
 function html() {
     return src('src/index.pug')
 
-    .pipe(pug({
-        pretty: true
-    }))
+    .pipe(pug())
     .pipe(concat('index.html'))
     .pipe(dest('dist'))
 }
